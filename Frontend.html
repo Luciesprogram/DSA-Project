@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pharmacy Checkup Queue</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Book Your Checkup</h1>
+  <form id="patient-form">
+    <input type="text" id="name" placeholder="Patient Name" required />
+    <input type="date" id="date" required />
+    <input type="number" id="priority" placeholder="Priority (1 = urgent)" required />
+    <button type="submit">Add Patient</button>
+  </form>
+
+  <button onclick="removeFIFO()">Remove First (FIFO)</button>
+  <input type="text" id="remove-name" placeholder="Name to Remove" />
+  <button onclick="removeByName()">Remove by Name</button>
+
+  <h2>Checkup List</h2>
+  <input type="date" id="search-date" />
+  <button onclick="fetchPatients()">Show Patients</button>
+  <ul id="patient-list"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
